@@ -2,6 +2,7 @@ package redis
 
 import (
 	"context"
+	"os"
 
 	"github.com/go-redis/redis/v8"
 )
@@ -10,7 +11,7 @@ var ctx = context.Background()
 
 func Default() (*redis.Client, context.Context, error) {
 	return redis.NewClient(&redis.Options{
-		Addr:     "redis:6379",
+		Addr:     os.Getenv("REDIS_HOST"),
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	}), ctx, nil
