@@ -1,0 +1,5 @@
+export APP_KEY=
+export APP_SECRET=
+export APP_URL=http://localhost:8080
+export GARMIN_USERNAME=
+export GARMIN_PASSWORD=

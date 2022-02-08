@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  air-app:
+    image: cosmtrek/air:latest
+    working_dir: /app
+    env_file:
+    - .envrc
+    ports:
+      - "0.0.0.0:8080:8080"
+    volumes:
+      - ".:/app"
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
