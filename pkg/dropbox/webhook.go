@@ -45,8 +45,8 @@ func Handler(c *gin.Context) error {
 		}
 
 		c := connect.NewClient()
-		c.Email = "***REMOVED***"
-		c.Password = "***REMOVED***"
+		c.Email = "REDACTED"
+		c.Password = "REDACTED"
 		err = c.Authenticate()
 		if err != nil {
 			log.Error(err)
